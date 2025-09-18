@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cybersecurity Portfolio Design System - Light + Dark Mode
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 0 0% 97%; /* #F7F7F7 */
+    --foreground: 0 0% 10%; /* near black for strong contrast */
+
+    --card: 150 20% 92%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    /* Darker greens for light mode */
+    --primary: 160 40% 35%;   /* darker green for contrast */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 160 30% 45%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 35%;
+
+    --accent: 160 35% 30%;    /* accent green, slightly darker */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 85%;
+    --ring: 160 40% 35%;
+
+    --radius: 1rem;
+
+    /* Icons (light mode = dark icons) */
+    --icon: 0 0% 10%;       /* black */
+    --icon-muted: 0 0% 40%; /* gray */
+
+    /* Section gradient */
+    --section-gradient: linear-gradient(to bottom right, hsl(0 0% 97%), hsl(160 40% 35% / 0.08));
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%; /* bright white for readability */
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Lighter greens for dark mode (glow effect) */
+    --primary: 160 55% 55%;   /* lighter green */
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 160 45% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 160 50% 60%;    /* glowing accent green */
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 160 55% 55%;
+
+    --radius: 1rem;
+
+    /* Icons (dark mode = white icons) */
+    --icon: 0 0% 100%;       /* white */
+    --icon-muted: 0 0% 70%;  /* light gray */
+
+    /* Section gradient */
+    --section-gradient: linear-gradient(to bottom right, hsl(0 0% 4%), hsl(160 55% 55% / 0.12));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* First section */
+  section.first-section {
+    background: var(--section-gradient);
+  }
+
+  /* Navigation hover fix */
+  nav a:hover {
+    color: hsl(var(--primary));
+  }
+
+  /* Icon utility (applies correct color depending on theme) */
+  .icon {
+    color: hsl(var(--icon));
+  }
+  .icon-muted {
+    color: hsl(var(--icon-muted));
+  }
+}
