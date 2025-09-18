@@ -38,7 +38,7 @@ export function HeroSection() {
           <div className="flex justify-center">
             <div className="w-72 h-72 md:w-[380px] md:h-[380px] rounded-full border-4 border-accent shadow-[0_0_28px_hsl(var(--accent))] overflow-hidden">
               <img
-                src="/images/ibrahim.png"
+                src="https://ibrahimkhaled47.github.io/portfolio/images/ibrahim.png"
                 alt="Ibrahim Khaled"
                 className="w-full h-full object-cover"
               />
