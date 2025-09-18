@@ -6,6 +6,7 @@ export function AboutSection() {
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
+        {/* Section Title */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
             About <span className="text-accent">Me</span>
@@ -16,9 +17,10 @@ export function AboutSection() {
           </p>
         </div>
 
+        {/* Grid: Profile + Professional Overview */}
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          {/* Profile Image + Info */}
-          <div className="order-2 md:order-1 h-full">
+          {/* Profile Image + Info (mobile-first, shows first) */}
+          <div className="h-full">
             <Card className="animated-border cyber-hover h-full flex">
               <CardContent className="p-8 flex flex-col items-center justify-center flex-grow">
                 {/* Profile Picture */}
@@ -63,7 +65,7 @@ export function AboutSection() {
           </div>
 
           {/* Professional Overview */}
-          <div className="order-1 md:order-2 h-full">
+          <div className="h-full">
             <Card className="animated-border h-full flex flex-col">
               <CardContent className="p-8 flex flex-col">
                 <h3 className="text-2xl font-bold mb-6 text-accent">
@@ -104,7 +106,11 @@ export function AboutSection() {
                       "Incident Response",
                       "Security Auditing",
                     ].map((skill) => (
-                      <Badge key={skill} variant="outline" className="cyber-hover">
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="cyber-hover"
+                      >
                         {skill}
                       </Badge>
                     ))}
