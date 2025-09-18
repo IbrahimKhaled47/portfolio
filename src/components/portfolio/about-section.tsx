@@ -24,7 +24,7 @@ export function AboutSection() {
                 {/* Profile Picture */}
                 <div className="w-48 h-48 rounded-full border-4 border-accent shadow-[0_0_25px_hsl(var(--accent))] overflow-hidden mb-6">
                   <img
-                    src="/images/ibrahim.png"
+                    src="/public/images/ibrahim.png"
                     alt="Ibrahim Khaled"
                     className="w-full h-full object-cover"
                   />
