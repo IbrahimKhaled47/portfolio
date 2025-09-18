@@ -32,13 +32,13 @@ export function HeroSection() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-4">
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-4 pt-24 md:pt-0">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto animate-fade-in-up">
           {/* Profile Image */}
           <div className="flex justify-center">
             <div className="w-72 h-72 md:w-[380px] md:h-[380px] rounded-full border-4 border-accent shadow-[0_0_28px_hsl(var(--accent))] overflow-hidden">
               <img
-                src="https://ibrahimkhaled47.github.io/portfolio/images/ibrahim.png"
+                src="/images/ibrahim.png"
                 alt="Ibrahim Khaled"
                 className="w-full h-full object-cover"
               />
@@ -47,16 +47,11 @@ export function HeroSection() {
 
           {/* Text Content */}
           <div className="text-center md:text-left flex flex-col justify-center">
-            {/* Status Badge */}
-            <Badge
-              variant="outline"
-              className="mb-4 animate-glow-pulse border-accent text-accent"
-            >
+            <Badge variant="outline" className="mb-4 animate-glow-pulse border-accent text-accent">
               <Terminal className="w-4 h-4 mr-2" />
               Available for Security Assessments
             </Badge>
 
-            {/* Main Heading */}
             <h1 className="text-6xl md:text-7xl font-bold mb-3 glow-text leading-tight">
               Ibrahim Khaled
               <span className="block text-accent text-2xl md:text-3xl mt-2">
@@ -64,13 +59,11 @@ export function HeroSection() {
               </span>
             </h1>
 
-            {/* Subheading */}
             <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl">
               Securing digital landscapes through ethical hacking, vulnerability
               assessments, and advanced penetration testing methodologies.
             </p>
 
-            {/* Skills Icons */}
             <div className="flex justify-center md:justify-start gap-6 mb-6">
               <div className="flex flex-col items-center cyber-hover">
                 <Shield className="w-7 h-7 text-accent mb-1" />
@@ -86,21 +79,11 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 md:justify-start justify-center">
-              <Button
-                size="lg"
-                className="cyber-hover animate-glow-pulse"
-                onClick={() => scrollToSection("projects")}
-              >
+              <Button size="lg" className="cyber-hover animate-glow-pulse" onClick={() => scrollToSection("projects")}>
                 View My Work
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="cyber-hover border-accent"
-                onClick={() => scrollToSection("contact")}
-              >
+              <Button variant="outline" size="lg" className="cyber-hover border-accent" onClick={() => scrollToSection("contact")}>
                 Get In Touch
               </Button>
             </div>
